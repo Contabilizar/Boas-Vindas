@@ -1,17 +1,19 @@
-<html lang="pt-BR"><head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bem-vindo à Contabilizar Contabilidade</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #f3f4f6;
             --bg-tertiary: #e5e7eb;
             --bg-header-footer: #000051;
-            --primary: #000051;
+            --primary bellissima: #000051;
             --accent: #1e3a8a;
             --hover-accent: #3b82f6;
             --text-primary: #1f2937;
@@ -152,15 +154,13 @@
             line-height: 1.4;
             padding: 0 10px;
         }
-		h5 {
+        h5 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--accent);
-            margin-top: calc(var(--spacing-unit) * 1.5);
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+            margin-bottom: 10px;
+            text-align: center;
         }
         .team-card-front h5 {
             font-size: 1.4rem;
@@ -214,7 +214,7 @@
         .value-card:hover i {
             color: var(--hover-accent);
         }
-        .value-card h3 {
+        .value-card h5 {
             font-size: 1.3rem;
             margin-bottom: 10px;
             color: var(--accent);
@@ -346,23 +346,18 @@
             gap: var(--spacing-unit);
             margin-top: var(--spacing-unit);
         }
-        @media (min-width: 769px) {
-            .contact-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .contact-card-modern {
-                max-width: 400px;
-            }
-        }
         .contact-card-modern {
             background: var(--bg-secondary);
-            padding: calc(var(--spacing-unit) * 1.5);
+            padding: var(--spacing-unit);
             border-radius: var(--border-radius-sm);
             border: 2px solid var(--accent);
             text-align: center;
             transition: var(--transition);
             box-shadow: var(--shadow);
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .contact-card-modern.no-link {
             cursor: default;
@@ -382,7 +377,7 @@
             color: var(--hover-accent);
             animation: pulse 1s infinite;
         }
-        .contact-card-modern h3 {
+        .contact-card-modern h5 {
             font-size: 1.4rem;
             font-weight: 600;
             color: var(--accent);
@@ -394,7 +389,7 @@
             color: inherit;
             transition: var(--transition);
         }
-        .card-link:hover span {
+        .card-link:hover h5 {
             color: var(--hover-accent);
         }
         .contact-card-modern span {
@@ -419,7 +414,7 @@
                 padding: var(--spacing-unit-sm);
             }
             .logo {
-                max-height: 50px;
+                max-height: 60px;
                 max-width: 150px;
             }
             .menu-toggle {
@@ -439,7 +434,7 @@
                 font-size: 1.2rem;
                 margin-top: var(--spacing-unit);
             }
-            .team-card-front h3 {
+            .team-card-front h3, .team-card-front h5 {
                 font-size: 1.1rem;
                 padding: 0 5px;
             }
@@ -483,7 +478,7 @@
             .value-card i {
                 font-size: 2rem;
             }
-            .value-card h3 {
+            .value-card h5 {
                 font-size: 1.1rem;
             }
             .value-card p {
@@ -533,21 +528,26 @@
                 line-height: 1.4;
             }
             .contact-grid {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-unit-sm);
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
             }
             .contact-card-modern {
-                max-width: 300px;
-                margin: 0 auto;
+                max-width: 100%;
+                min-height: 150px;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             .contact-card-modern i {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                margin-bottom: 10px;
             }
-            .contact-card-modern h3 {
-                font-size: 1.2rem;
+            .contact-card-modern h5 {
+                font-size: 1rem;
             }
             .contact-card-modern span {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
             .footer {
                 font-size: 0.85rem;
@@ -570,22 +570,28 @@
             .team-grid {
                 grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             }
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .contact-card-modern {
-                max-width: 250px;
+                max-width: 100%;
+                min-height: 120px;
+            }
+            .contact-card-modern i {
+                font-size: 1.8rem;
+            }
+            .contact-card-modern h5 {
+                font-size: 0.9rem;
             }
         }
-        @media (max-width: 320px) {
-            .team-grid {
+        @media (max-width: 360px) {
+            .contact-grid {
                 grid-template-columns: 1fr;
-            }
-            .team-card {
-                width: 100%;
-                max-width: 200px;
-                min-height: 300px;
-                margin: 0 auto;
             }
             .contact-card-modern {
                 max-width: 200px;
+                margin: 0 auto;
+                min-height: 150px;
             }
         }
         @media (min-width: 769px) {
@@ -594,6 +600,12 @@
             }
             .team-card-front img:hover {
                 transform: scale(1.1);
+            }
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .contact-card-modern {
+                max-width: 400px;
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -625,74 +637,74 @@
         </div>
     </header>
     <div class="container">
-        <div class="section aos-init aos-animate" id="welcome" data-aos="fade-in" data-aos-duration="800">
+        <div class="section" id="welcome" data-aos="fade-in" data-aos-duration="800">
             <h1>BEM VINDO AO CONTABILIZAR</h1>
             <p>Prezado(a) cliente,</p>
             <p>Agradecemos por confiar em nosso escritório. Nosso compromisso é oferecer um atendimento claro, responsável e alinhado às suas obrigações contábeis, fiscais e trabalhistas. Estamos à disposição para orientá-lo(a) sempre que necessário, com atenção e profissionalismo.</p>
             <p>Conte conosco para o suporte técnico necessário ao cumprimento das suas rotinas contábeis.</p>
         </div>
-        <div class="section aos-init aos-animate" id="about" data-aos="slide-up" data-aos-duration="800">
+        <div class="section" id="about" data-aos="slide-up" data-aos-duration="800">
             <h2>Conheça a Empresa</h2>
             <p>A Contabilizar atua há 15 anos no mercado contábil, oferecendo serviços especializados para empresas que buscam eficiência e confiabilidade. Sob a direção de Vanderlei dos Santos, consolidamos uma abordagem focada nos clientes.</p>
-            <iframe class="office-image aos-init aos-animate" width="100%" height="700" src="https://www.youtube.com/embed/K2f6tdzjtVE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=K2f6tdzjtVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" data-aos="zoom-in" data-aos-duration="800"></iframe>
+            <iframe class="office-image" width="100%" height="700" src="https://www.youtube.com/embed/K2f6tdzjtVE?autoplay=1&mute=1&loop=1&playlist=K2f6tdzjtVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen data-aos="zoom-in" data-aos-duration="800"></iframe>
             <div class="mission-vision-values">
-                <div class="value-card aos-init aos-animate" data-aos="flip-left" data-aos-duration="800">
+                <div class="value-card" data-aos="flip-left" data-aos-duration="800">
                     <i class="fas fa-bullseye"></i>
                     <h5>Missão</h5>
                     <p>Desenvolver serviços contábeis com excelência, auxiliando clientes a empreender e crescer de forma sustentável.</p>
                 </div>
-                <div class="value-card aos-init aos-animate" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
+                <div class="value-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
                     <i class="fas fa-eye"></i>
                     <h5>Visão</h5>
                     <p>Ser referência em contabilidade estratégica e digital, reconhecida por inovação e comprometimento com o sucesso dos clientes.</p>
                 </div>
-                <div class="value-card aos-init aos-animate" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
+                <div class="value-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
                     <i class="fas fa-heart"></i>
                     <h5>Valores</h5>
                     <p>Honestidade, transparência, excelência, competência, fé, comprometimento, perseverança.</p>
                 </div>
             </div>
         </div>
-        <div class="section aos-init aos-animate" id="services" data-aos="slide-right" data-aos-duration="800">
+        <div class="section" id="services" data-aos="slide-right" data-aos-duration="800">
             <h2>Serviços Prestados</h2>
             <p>Oferecemos uma ampla gama de serviços para atender suas necessidades:</p>
             <div class="services-list">
-                <div class="service-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
+                <div class="service-item" data-aos="fade-in" data-aos-duration="800">
                     <i class="fas fa-building"></i>
                     <div>
                         <strong>Abertura e Regularização de Empresas</strong>
                         <p>Auxílio na abertura de negócios, alterações contratuais e regularização fiscal.</p>
                     </div>
                 </div>
-                <div class="service-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="service-item" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <i class="fas fa-book"></i>
                     <div>
                         <strong>Contabilidade Geral</strong>
                         <p>Escrituração contábil completa, com balanços e demonstrações financeiras.</p>
                     </div>
                 </div>
-                <div class="service-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="service-item" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <i class="fas fa-tractor"></i>
                     <div>
                         <strong>Contabilidade Rural</strong>
                         <p>Gestão financeira e tributária para atividades agropecuárias.</p>
                     </div>
                 </div>
-                <div class="service-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
+                <div class="service-item" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
                     <i class="fas fa-calculator"></i>
                     <div>
                         <strong>Gestão Fiscal e Tributária</strong>
                         <p>Apuração de tributos e planejamento tributário para otimizar a carga fiscal.</p>
                     </div>
                 </div>
-                <div class="service-item aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+                <div class="service-item" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
                     <i class="fas fa-users"></i>
                     <div>
                         <strong>Gestão Pessoal</strong>
                         <p>Admissões, rescisões, folha de pagamento e obrigações acessórias.</p>
                     </div>
                 </div>
-                <div class="service-item aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500">
+                <div class="service-item" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500">
                     <i class="fas fa-file-alt"></i>
                     <div>
                         <strong>Declaração de Imposto de Renda</strong>
@@ -701,13 +713,13 @@
                 </div>
             </div>
         </div>
-        <div class="section aos-init" id="team" data-aos="slide-left" data-aos-duration="800">
+        <div class="section" id="team" data-aos="slide-left" data-aos-duration="800">
             <h2>Estrutura da Equipe</h2>
             <p>Conheça nossa equipe dedicada ao seu sucesso, composta por profissionais qualificados!</p>
-            <img src="team.jpg" alt="Equipe Contabilizar" class="team-image aos-init" data-aos="zoom-in" data-aos-duration="800">
-            <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-user-tie"></i> Diretoria</h3>
+            <img src="team.jpg" alt="Equipe Contabilizar" class="team-image" data-aos="zoom-in" data-aos-duration="800">
+            <h3 data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-user-tie"></i> Diretoria</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="José.jpg" alt="Vanderlei dos Santos">
@@ -720,7 +732,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Willian.jpg" alt="Willian dos Santos">
@@ -733,7 +745,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Vinicius.jpg" alt="Vinicius dos Santos">
@@ -746,7 +758,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Wagner.jpg" alt="Wagner Santos">
@@ -760,9 +772,9 @@
                     </div>
                 </div>
             </div>
-            <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-book"></i> Departamento Contábil</h3>
+            <h3 data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-book"></i> Departamento Contábil</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Ytalo.jpg" alt="Ytalo do Nascimento">
@@ -775,7 +787,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Diego.jpg" alt="Diego Lamônica">
@@ -788,7 +800,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Pedro.jpg" alt="Pedro Casas">
@@ -802,9 +814,9 @@
                     </div>
                 </div>
             </div>
-            <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-file-invoice"></i> Departamento Fiscal</h3>
+            <h3 data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-file-invoice"></i> Departamento Fiscal</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Midian.jpg" alt="Midian de Paula">
@@ -817,7 +829,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Jaqueline.jpg" alt="Jaqueline Zanatta">
@@ -830,7 +842,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Jessica.jpg" alt="Jessica Beatriz">
@@ -843,7 +855,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Neirieli.jpg" alt="Neirieli Caroline">
@@ -856,7 +868,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Suelen.jpg" alt="Suelen Calvi">
@@ -870,9 +882,9 @@
                     </div>
                 </div>
             </div>
-            <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-users"></i> Departamento Pessoal (DP)</h3>
+            <h3 data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-users"></i> Departamento Pessoal (DP)</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Hudson.jpg" alt="Hudson Pereira">
@@ -885,7 +897,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Yesa.jpg" alt="Yesa Furtado">
@@ -898,7 +910,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Victor.jpg" alt="Victor Daniel">
@@ -912,9 +924,9 @@
                     </div>
                 </div>
             </div>
-            <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-briefcase"></i> Departamentos Especializados</h3>
+            <h3 data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-briefcase"></i> Departamentos Especializados</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Julio.jpg" alt="Julio Cesar Dill">
@@ -927,7 +939,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Jessica2.jpg" alt="Jessica Santos">
@@ -940,7 +952,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Eloisa.jpg" alt="Eloisa Carvalho">
@@ -954,9 +966,9 @@
                     </div>
                 </div>
             </div>
-            <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-headset"></i> Administrativo / Apoio</h3>
+            <h3 data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-headset"></i> Administrativo / Apoio</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Maria.jpg" alt="Maria Randon">
@@ -969,7 +981,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Matheus.jpg" alt="Matheus Felipe">
@@ -982,7 +994,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="team-card" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <img src="Lucia.jpg" alt="Lucia Silva">
@@ -997,48 +1009,41 @@
                 </div>
             </div>
         </div>
-        <div class="section aos-init" id="contact" data-aos="fade-in" data-aos-duration="800">
-            
-    <h2 data-aos="zoom-in" data-aos-duration="800" class="aos-init">Entre em Contato Conosco</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: var(--text-primary); margin-bottom: var(--spacing-unit);" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100" class="aos-init"></p>
-    <p>Estamos prontos para oferecer soluções contábeis personalizadas. Fale com nossa equipe hoje mesmo!</p>
+        <div class="section" id="contact" data-aos="fade-in" data-aos-duration="800">
+            <h2 data-aos="zoom-in" data-aos-duration="800">Entre em Contato Conosco</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-primary); margin-bottom: var(--spacing-unit);" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">Estamos prontos para oferecer soluções contábeis personalizadas. Fale com nossa equipe hoje mesmo!</p>
             <div class="contact-grid">
-                <div class="contact-card-modern aos-init" data-aos="fade-up" data-aos-duration="800">
+                <div class="contact-card-modern" data-aos="fade-up" data-aos-duration="800">
                     <a href="https://wa.me/+556635445981" class="card-link">
                         <i class="fab fa-whatsapp"></i>
                         <h5>WhatsApp</h5>
-                        
                     </a>
                 </div>
-                <div class="contact-card-modern aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="contact-card-modern" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <a href="mailto:atendimento@contabilizarcontabil.com" class="card-link">
                         <i class="fas fa-envelope"></i>
                         <h5>E-mail</h5>
-                        
                     </a>
                 </div>
-                <div class="contact-card-modern aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <a href="https://www.contabilizarcontabil.com.br" class="card-link">
+                <div class="contact-card-modern" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <a href="https://www.contabilizarcontabil.com" class="card-link">
                         <i class="fas fa-globe"></i>
                         <h5>Website</h5>
-                        
                     </a>
                 </div>
-                <div class="contact-card-modern aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="contact-card-modern" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <a href="https://www.instagram.com/contabilizarcontabil" class="card-link">
                         <i class="fab fa-instagram"></i>
                         <h5>Instagram</h5>
-                        
                     </a>
                 </div>
-                <div class="contact-card-modern aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="contact-card-modern" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <a href="https://maps.google.com/?q=Avenida+dos+Imigrantes,+3674,+Centro-Norte,+Sorriso,+MT,+78890-148" class="card-link">
                         <i class="fas fa-map-marker-alt"></i>
                         <h5>Endereço</h5>
-                        
                     </a>
                 </div>
-                <div class="contact-card-modern no-link aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="contact-card-modern no-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div>
                         <i class="fas fa-id-card"></i>
                         <h5>CRC</h5>
@@ -1049,7 +1054,7 @@
         </div>
     </div>
     <footer class="footer">
-        <href>© 2025 Contabilizar Contabilidade. Todos os direitos reservados.</href>
+        <p>© 2025 Contabilizar Contabilidade. Todos os direitos reservados.</p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -1060,6 +1065,5 @@
             navMenu.classList.toggle('active');
         });
     </script>
-
-
-        }</body></html>
+</body>
+</html>
