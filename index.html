@@ -19,6 +19,7 @@
             --text-secondary: #4b5563;
             --border: #d1d5db;
             --white: #ffffff;
+			--green: #aff030;
             --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
             --transition: all 0.3s ease;
@@ -161,6 +162,14 @@
             margin-bottom: 10px;
             text-align: center;
         }
+		h6 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--green);
+            margin-bottom: 10px;
+            text-align: center;
+        }
         .team-card-front h5 {
             font-size: 1.4rem;
             margin: 0 0 5px;
@@ -209,8 +218,17 @@
             color: var(--accent);
             margin-bottom: 15px;
             transition: var(--transition);
-        }
+		}
         .value-card:hover i {
+            color: var(--hover-accent);	
+		}
+        .value-card g {
+            font-size: 3rem;
+            color: var(--green);
+            margin-bottom: 15px;
+            transition: var(--transition);	
+        }
+        .value-card:hover g {
             color: var(--hover-accent);
         }
         .value-card h5 {
@@ -860,20 +878,7 @@
                             <p>Responsável por atender empresas do regime do Simples Nacional e Lucro Presumido, com foco maior no segmento de comércio.</p>
                         </div>
                     </div>
-                </div>
-                <div class="team-card aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
-                    <div class="team-card-inner">
-                        <div class="team-card-front">
-                            <img src="Jessica.jpg" alt="Jessica Beatriz">
-                            <h5>Jessica Beatriz</h5>
-                            <h4>Analista Fiscal</h4>
-                        </div>
-                        <div class="team-card-back">
-                            <i class="fas fa-file-invoice-dollar"></i>
-                            <p>Responsável por atender empresas do regime do Lucro Real, com foco no segmento de transportes.</p>
-                        </div>
-                    </div>
-                </div>
+                </div>               
                 <div class="team-card aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="team-card-inner">
                         <div class="team-card-front">
@@ -945,19 +950,6 @@
             </div>
             <h3 data-aos="zoom-in" data-aos-duration="800" class="aos-init"><i class="fas fa-briefcase"></i> Departamentos Especializados</h3>
             <div class="team-grid">
-                <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
-                    <div class="team-card-inner">
-                        <div class="team-card-front">
-                            <img src="Julio.jpg" alt="Julio Cesar Dill">
-                            <h5>Julio Cesar Dill</h5>
-                            <h4>Paralegal</h4>
-                        </div>
-                        <div class="team-card-back">
-                            <i class="fas fa-gavel"></i>
-                            <p>Responsável pelo setor, garantindo cumprimento das demandas e confiança nos processos de constituição e legalização.</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
@@ -990,8 +982,8 @@
                 <div class="team-card aos-init" data-aos="fade-in" data-aos-duration="800">
                     <div class="team-card-inner">
                         <div class="team-card-front">
-                            <img src="Maria.jpg" alt="Maria Randon">
-                            <h5>Maria Randon</h5>
+                            <img src="Jenifer.jpg" alt="Jenifer Taline">
+                            <h5>Jenifer Taline</h5>
                             <h4>Secretaria</h4>
                         </div>
                         <div class="team-card-back">
